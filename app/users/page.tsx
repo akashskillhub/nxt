@@ -9,7 +9,7 @@ export default async function page() {
 
     const { data } = await axios.get("https://jsonplaceholder.typicode.com/users")
     const CONTENT = <ul>
-        {data.map((item: any) => <li>
+        {data.map((item: any) => <li key={item.id}>
             {item.name}
         </li>)}
     </ul>
